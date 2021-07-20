@@ -51,10 +51,7 @@ namespace PocketGo.App.Tests.Models
         public void Given_Trainer_Then_AddTrainer_Adds_Trainer_To_Trainers()
         {
             // Arrange
-            var trainer = new Trainer
-            {
-                Id = Guid.NewGuid()
-            };
+            var trainer = new Trainer();
 
             // Act
             _sut.AddTrainer(trainer);
@@ -72,17 +69,12 @@ namespace PocketGo.App.Tests.Models
         public void Given_Trainer_Id_Then_RemoveTrainer_Removes_Trainer_From_Trainers()
         {
             // Arrange
-            var trainer = new Trainer
-            {
-                Id = Guid.NewGuid()
-            };
+            var trainer = new Trainer();
 
             _sut.AddTrainer(trainer);
 
-
             // Act
             _sut.RemoveTrainer(trainer.Id);
-
 
             // Assert
             _sut.Trainers.Should().BeEmpty();
@@ -93,10 +85,7 @@ namespace PocketGo.App.Tests.Models
         public void Given_Creature_Then_AddCreature_Adds_Creature_To_Creatures()
         {
             // Arrange
-            var creature = new Creature
-            {
-                Id = Guid.NewGuid()
-            };
+            var creature = new Creature("flying", "Charblander");
 
             // Act
             _sut.AddCreature(creature);
@@ -114,10 +103,7 @@ namespace PocketGo.App.Tests.Models
         public void Given_Creature_Id_Then_RemoveCreature_Removes_Creature_From_Creatures()
         {
             // Arrange
-            var creature = new Creature
-            {
-                Id = Guid.NewGuid()
-            };
+            var creature = new Creature("flying", "Charblander");
 
             _sut.AddCreature(creature);
 
