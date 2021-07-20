@@ -13,12 +13,11 @@ namespace PocketGo.App.Models
         /// </summary>
         private Coordinate _position;
 
-
         /// <summary>
-        ///     Gets or sets the UNIQUE Id of this PocketGo world object.
+        ///     Gets the UNIQUE Id of this PocketGo world object.
         /// </summary>
         /// <value></value>
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
         /// <summary>
         ///     Gets or sets the position of this PocketGo world object.
@@ -31,6 +30,7 @@ namespace PocketGo.App.Models
 
         public WorldObject(Coordinate initialPosition = default)
         {
+            Id = Guid.NewGuid();
             _position = initialPosition;
         }
     }
