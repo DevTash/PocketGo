@@ -8,7 +8,7 @@ namespace PocketGo.App.Models
     public class Creature : WorldObject
     {
         /// <summary>
-        ///     Gets or sets this creatures 
+        ///     Gets or sets this creatures. 
         /// </summary>
         /// <value></value>
         public string Family { get; }
@@ -16,7 +16,7 @@ namespace PocketGo.App.Models
 
 
         /// <summary>
-        ///     Constructs a new instance of Creature
+        ///     Constructs a new instance of Creature.
         /// </summary>
         /// <param name="family"></param>
         /// <param name="species"></param>
